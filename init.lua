@@ -1,1 +1,2 @@
-require("zckerby.setting")
+--config folders
+require "zckerby.init"
