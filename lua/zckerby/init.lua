@@ -19,5 +19,6 @@ require('lazy').setup({
     require 'zckerby.plugins.colortheme', 
     require 'zckerby.plugins.nvterm',
     require 'zckerby.plugins.nerd',
+    require 'zckerby.plugins.mason',
     
 })
