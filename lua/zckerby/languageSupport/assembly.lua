@@ -7,3 +7,4 @@ return {
   ft = "nasm",
   lazy = true,
 }
+--link to repo https://github.com/Who5673/who5673-nasm
