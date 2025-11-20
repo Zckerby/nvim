@@ -16,5 +16,7 @@ rtp:prepend(lazypath)
 
 require('lazy').setup({
     require 'zckerby.plugins.neotree',
-    require 'zckerby.plugins.colortheme'  
+    require 'zckerby.plugins.colortheme' 
+--    require 'zckerby.plugins.nvterm'
+    
 })
