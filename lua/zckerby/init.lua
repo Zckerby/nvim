@@ -19,11 +19,22 @@ require('lazy').setup({
     require 'zckerby.plugins.colortheme', 
     require 'zckerby.plugins.nvterm',
     require 'zckerby.plugins.nerd',
-    require 'zckerby.plugins.mason',
     require 'zckerby.languageSupport.assembly',
     require 'zckerby.plugins.bufferline', 
     require 'zckerby.plugins.lualine', 
-    require 'zckerby.plugins.treesitter',
+   -- require 'zckerby.plugins.treesitter',
     require 'zckerby.plugins.telescope',
-    require 'zckerby.plugins.lsp',
+    require 'zckerby.languageSupport.assembly', 
+    require 'zckerby.languageSupport.mason',
+
+    'https://github.com/neovim/nvim-lspconfig',
+
 })
+--vim.cmd.colorscheme('jellybeans-light')
+vim.cmd.colorscheme('jellybeans-muted')
+vim.lsp.enable({
+        'lua_ls',
+        'clangd', 
+        'java_language_server',
+        'csharp_ls'
+    })
