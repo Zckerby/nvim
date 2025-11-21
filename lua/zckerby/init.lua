@@ -20,7 +20,10 @@ require('lazy').setup({
     require 'zckerby.plugins.nvterm',
     require 'zckerby.plugins.nerd',
     require 'zckerby.plugins.mason',
-    require 'zckerby.plugins.languageSupport.assembly',
-    
-    
+    require 'zckerby.languageSupport.assembly',
+    require 'zckerby.plugins.bufferline', 
+    require 'zckerby.plugins.lualine', 
+    require 'zckerby.plugins.treesitter',
+    require 'zckerby.plugins.telescope',
+    require 'zckerby.plugins.lsp',
 })
