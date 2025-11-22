@@ -1,2 +1,0 @@
-https://github.com/rockerBOO/awesome-neovim?tab=readme-ov-file
-Library of plugins ^
