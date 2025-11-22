@@ -17,9 +17,9 @@ require('lazy').setup({
     require 'zckerby.ui.lualine',
     require 'zckerby.ui.neotree',
     require 'zckerby.ui.nerd',
-    
+    require 'zckerby.ui.themery',
     --plugins
-    require 'zckerby.plugins.treesitter', 
+    require 'zckerby.plugins.treesitter',
 --    lsp servers
 --    require zckerby.lspConfig.lsp-config'
     require 'zckerby.lspConfig.mason'
