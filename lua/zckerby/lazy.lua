@@ -11,11 +11,19 @@ local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
 require('lazy').setup({
-    require 'zckerby.plugins.neotree',--file exlporer sidebar **requires custom buildout
-    require 'zckerby.plugins.colortheme',--colorscheme of the window 
-    require 'zckerby.plugins.nerd',--nerdfont does not matter
-    require 'zckerby.plugins.bufferline', --top tabs **requires buildout
-    require 'zckerby.plugins.lualine', --bottom line **customization if needed for buildout
-    require 'zckerby.plugins.treesitter', -- tree sitter is broken
---    require 'zckerby.plugins.telescope',
-    })
+--  ui plugins
+    require 'zckerby.ui.colortheme',--colorscheme of the window 
+    require 'zckerby.ui.bufferline',
+    require 'zckerby.ui.lualine',
+    require 'zckerby.ui.neotree',
+    require 'zckerby.ui.nerd',
+    
+    --plugins
+    require 'zckerby.plugins.treesitter', 
+--    lsp servers
+--    require zckerby.lspConfig.lsp-config'
+    require 'zckerby.lspConfig.mason'
+--    require 'zckerby.lspConfig.mason-lsp'
+
+})
+
