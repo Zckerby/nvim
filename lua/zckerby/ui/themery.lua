@@ -7,7 +7,8 @@ return {
                 {name = "Jellybean Light", colorscheme = "jellybeans-light",},
                 {name = "Jellybean Dark", colorscheme = "jellybeans-muted"},
                 {name = "Jellybean Mid Light", colorscheme = "jellybeans-mono-light"},
-                {name = "Vim Trip", colorscheme = "vim"}
+                {name = "Vim Trip", colorscheme = "vim"},
+                {name = "Jellybeans Dark Mono" , colorscheme = "jellybeans-muted"},
           },
           livePreview = true,
       })

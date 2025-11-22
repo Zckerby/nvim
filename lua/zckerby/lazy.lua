@@ -18,6 +18,7 @@ require('lazy').setup({
     require 'zckerby.ui.neotree',
     require 'zckerby.ui.nerd',
     require 'zckerby.ui.themery',
+    require 'zckerby.ui.tags',
     --plugins
     require 'zckerby.plugins.treesitter',
 --    lsp servers
