@@ -25,7 +25,7 @@ return {
       sections = { 'error', 'warn' },
       symbols = { error = ' ', warn = ' ', info = ' ', hint = ' ' },
       colored = true,
-      update_in_insert = false,
+      update_in_insert = true,
       always_visible = true,
       cond = hide_in_width,
     }

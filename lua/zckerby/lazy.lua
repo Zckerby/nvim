@@ -24,6 +24,7 @@ require('lazy').setup({
 --    lsp servers
 --    require zckerby.lspConfig.lsp-config'
     require 'zckerby.lspConfig.mason',
-    require 'zckerby.lspConfig.blink'
+    require 'zckerby.lspConfig.blink',
+    require 'zckerby.lspConfig.copilot',
 })
 
