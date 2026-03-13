@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 --==================================================================================================
---OPTIONS
+--OPTION
 --==================================================================================================
-vim.opt.number = true --line numbers on 
+vim.opt.number = true --line numbers on
 vim.opt.relativenumber = true --relative line numbers
 vim.opt.cursorline = true -- highlight the current line
 vim.opt.wrap = false --wrap lines not default
