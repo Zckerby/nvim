@@ -1,7 +1,5 @@
-return {
-  'nvim-lualine/lualine.nvim',
-  config = function()
-    local mode = {
+vim.pack.add{ 'https://github.com/nvim-lualine/lualine.nvim',}
+local mode = {
       'mode',
       fmt = function(str)
         return ' ' .. str
@@ -68,5 +66,3 @@ return {
       tabline = {},
       extensions = { 'fugitive' },
     }
-  end,
-}

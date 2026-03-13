@@ -12,19 +12,10 @@ rtp:prepend(lazypath)
 
 require('lazy').setup({
 --  ui plugins
-    require 'zckerby.ui.colortheme',--colorscheme of the window 
-    require 'zckerby.ui.bufferline',
-    require 'zckerby.ui.lualine',
+--    require 'zckerby.ui.bufferline',
+--    require 'zckerby.ui.lualine',
     require 'zckerby.ui.neotree',
     require 'zckerby.ui.nerd',
-    require 'zckerby.ui.themery',
     require 'zckerby.ui.tags',
-    --plugins
-    require 'zckerby.plugins.treesitter',
---    lsp servers
---    require zckerby.lspConfig.lsp-config'
-    require 'zckerby.lspConfig.mason',
-    require 'zckerby.lspConfig.blink',
-    require 'zckerby.lspConfig.copilot',
 })
 
