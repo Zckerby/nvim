@@ -1,10 +1,10 @@
 --config folders
 require ("zckerby.vimOptions.keymaps")
 require ("zckerby.vimOptions.options2")
---require ("zckerby.lazy")
 require ("zckerby.version2.treesitter")
 require ("zckerby.version2.themery")
 require ("zckerby.version2.lualine")
 require ("zckerby.version2.lsp")
 require("zckerby.version2.neotree")
 require ("zckerby.version2.telescope")
+require ("zckerby.version2.copilot")

@@ -1,5 +1,5 @@
 vim.pack.add({
-    "https://www.github.com/neovim/nvim-lspconfig",
+  "https://www.github.com/neovim/nvim-lspconfig",
 	"https://github.com/mason-org/mason.nvim",
 	"https://github.com/creativenull/efmls-configs-nvim",
 	{
@@ -115,7 +115,6 @@ require("blink.cmp").setup({
 	keymap = {
 		preset = "none",
 		["<C-Space>"] = { "show", "hide" },
-		["<CR>"] = { "accept", "fallback" },
 		["<C-j>"] = { "select_next", "fallback" },
 		["<C-k>"] = { "select_prev", "fallback" },
 		["<Tab>"] = { "snippet_forward", "fallback" },
@@ -146,6 +145,24 @@ vim.lsp.config("lua_ls", {
 		},
 	},
 })
+vim.lsp.config("cssls", {
+  cmd = { "vscode-css-language-server", "--stdio" },
+  filetypes = { "css", "scss", "less" },
+  root_markers = { "package.json", ".git" },
+  capabilities = caps,
+  settings = {
+    css = {
+      validate = true,
+    },
+    scss = {
+      validate = true,
+    },
+    less = {
+      validate = true,
+    },
+  },
+})
+
 vim.lsp.config("pyright", {})
 vim.lsp.config("bashls", {})
 vim.lsp.config("ts_ls", {})
