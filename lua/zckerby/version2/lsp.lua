@@ -168,18 +168,20 @@ vim.lsp.config("bashls", {})
 vim.lsp.config("ts_ls", {})
 vim.lsp.config("clangd", {
     cmd = {
-        'clangd',
-        '--background-index',
-        '--clang-tidy',
-        '--header-insertion=never',
-        '--completion-style=detailed',
-        '--query-driver=/nix/store/*-gcc-*/bin/gcc*,/nix/store/*-clang-*/bin/clang*,/run/current-system/sw/bin/cc*',
-    },
-    filetypes = { 'c', 'cpp', 'objc', 'objcpp' },
-    root_markers = { 'compile_commands.json', '.clangd', 'configure.ac', 'Makefile', '.git' },
+        "clangd",
+        "--background-index",
+        "--clang-tidy",
+        "--header-insertion=never",
+        "--completion-style=detailed",
+        "--query-driver=C:/_tools/MinGW/bin/*"   },
+    filetypes = { "c", "cpp", "objc", "objcpp" },
+    root_markers = { "compile_commands.json", ".clangd", "configure.ac", "Makefile", ".git" },
     capabilities = caps,
     init_options = {
-        fallbackFlags = { '-std=c23' }, -- Default to C23
+        fallbackFlags = {
+            "-std=c++17",
+            "-IC:/_tools/MinGW/include",
+        },
     },
 })
 
@@ -249,6 +251,7 @@ end
 
 vim.lsp.enable({
 	"lua_ls",
+  "cssls",
 	"pyright",
 	"bashls",
 	"ts_ls",
