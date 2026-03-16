@@ -63,7 +63,8 @@
     },
     "onedark.nvim": {
       "rev": "de495fabe171d48aed5525f002d14414efcecbb2",
-      "src": "https://github.com/navarasu/onedark.nvim"
+      "src": "https://github.com/navarasu/onedark.nvim",
+      "version": "'v0.1.0'"
     },
     "onedarkpro.nvim": {
       "rev": "dab7b623d48b50330c43234958c0ba2de9b501d5",
