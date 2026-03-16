@@ -7,6 +7,7 @@ vim.pack.add({
 		version = vim.version.range("1.*"),
 	},
 	"https://github.com/L3MON4D3/LuaSnip",
+  "https://github.com/williamboman/mason-lspconfig.nvim",
 })
 local function packadd(name)
 	vim.cmd("packadd " .. name)
@@ -248,6 +249,17 @@ do
 		},
 	})
 end
+
+require("mason-lspconfig").setup({
+  ensure_installed = {
+  "clangd",
+  "cssls",
+  "lua_ls",
+  "efm",
+  "prettier_d",
+  "stylua",
+  }
+})
 
 vim.lsp.enable({
 	"lua_ls",
