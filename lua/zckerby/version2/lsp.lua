@@ -21,7 +21,7 @@ packadd("LuaSnip")
 require("mason").setup()
 
 local diagnostic_signs = {
-	Error = " ",
+	Error = " ",
 	Warn = " ",
 	Hint = "",
 	Info = "",
@@ -180,7 +180,7 @@ vim.lsp.config("clangd", {
     capabilities = caps,
     init_options = {
         fallbackFlags = {
-            "-std=c++17",
+            "-std=c23",
             "-IC:/_tools/MinGW/include",
         },
     },

@@ -1,0 +1,60 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "l": "project_panel::Open",
+      "h": "project_panel::CollapseAllEntries",
+      "j": "menu::SelectNext",
+      "k": "menu::SelectPrevious",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space e": "project_panel::Toggle",
+      "space f f": "file_finder::Toggle",
+      "space f g": "workspace::NewSearch",
+      "space f b": "tab_switcher::Toggle",
+      "space v": "pane::SplitVertical",
+      "space h": "pane::SplitHorizontal",
+      "space d": "editor::ToggleDiagnostics",
+      "tab": "pane::ActivateNextItem",
+      "shift-tab": "pane::ActivatePreviousItem",
+      "space t x": "pane::CloseActiveItem",
+      "space t o": "workspace::NewFile",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "ctrl-j": "menu::SelectNext",
+      "ctrl-k": "menu::SelectPrevious",
+      "shift-tab": "editor::PreviousSnippetTabstop",
+    },
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-shift-t": "workspace::NewTerminal",
+    },
+  },
+]
