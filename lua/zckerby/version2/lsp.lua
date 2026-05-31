@@ -174,13 +174,13 @@ vim.lsp.config("clangd", {
         "--clang-tidy",
         "--header-insertion=never",
         "--completion-style=detailed",
-        "--query-driver=C:/_tools/MinGW/bin/*"   },
+        "--query-driver=C:/_tools/w64devkitinGW/bin/*"   },
     filetypes = { "c", "cpp", "objc", "objcpp" },
     root_markers = { "compile_commands.json", ".clangd", "configure.ac", "Makefile", ".git" },
     capabilities = caps,
     init_options = {
         fallbackFlags = {
-            "-std=c23",
+            "-std=c++17",
             "-IC:/_tools/MinGW/include",
         },
     },
