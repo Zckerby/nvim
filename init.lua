@@ -1,11 +1,19 @@
---config folders
-require ("zckerby.vimOptions.keymaps")
-require ("zckerby.vimOptions.options2")
-require ("zckerby.version2.treesitter")
-require ("zckerby.version2.themery")
-require ("zckerby.version2.lualine")
-require ("zckerby.version2.lsp")
-require("zckerby.version2.neotree")
-require ("zckerby.version2.telescope")
-require ("zckerby.version2.copilot")
---require ("zckerby.version2.bufferline")
+--==================================================================================================
+-- zckerby :: init.lua   (Neovim 0.12+, built-in vim.pack)
+--==================================================================================================
+
+-- core (load first)
+require("zckerby.core.options")
+require("zckerby.core.keymaps")
+
+-- plugins
+require("zckerby.plugins.treesitter")
+require("zckerby.plugins.themery")
+require("zckerby.plugins.lualine")
+require("zckerby.plugins.nvimtree")
+require("zckerby.plugins.telescope")
+require("zckerby.plugins.pairs") -- autopairs + autotag (before completion for <CR> fallback)
+require("zckerby.plugins.completion") -- MUST load before lsp (provides completion capabilities)
+require("zckerby.plugins.lsp")
+require("zckerby.plugins.format")
+require("zckerby.plugins.copilot")
