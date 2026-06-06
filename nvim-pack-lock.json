@@ -21,6 +21,10 @@
       "rev": "6cd7280adead7f586db6fccbd15d2cac7e2188b9",
       "src": "https://github.com/rafamadriz/friendly-snippets"
     },
+    "houston.nvim": {
+      "rev": "5b0d70f0bfb6de2838d9b16fc941379c98422e7d",
+      "src": "https://github.com/devbydaniel/houston.nvim"
+    },
     "jellybeans.nvim": {
       "rev": "29f4c17981f70c0919c2f3f918da9a89f906bf37",
       "src": "https://github.com/wtfox/jellybeans.nvim"
@@ -94,6 +98,10 @@
     "plenary.nvim": {
       "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
       "src": "https://github.com/nvim-lua/plenary.nvim"
+    },
+    "shadotheme": {
+      "rev": "3ef4726d9b03fa878c528de569233ffc09917968",
+      "src": "https://github.com/Shadorain/shadotheme"
     },
     "telescope-fzf-native.nvim": {
       "rev": "b25b749b9db64d375d782094e2b9dce53ad53a40",
