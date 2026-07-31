@@ -16,4 +16,3 @@ require("zckerby.plugins.pairs") -- autopairs + autotag (before completion for <
 require("zckerby.plugins.completion") -- MUST load before lsp (provides completion capabilities)
 require("zckerby.plugins.lsp")
 require("zckerby.plugins.format")
-require("zckerby.plugins.copilot")

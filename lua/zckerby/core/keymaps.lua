@@ -30,11 +30,11 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", opts)
 vim.keymap.set("n", "<Tab>", "<cmd>bnext<CR>", opts)
 vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<CR>", opts)
 vim.keymap.set("n", "<leader>x", "<cmd>bdelete!<CR>", opts) -- close buffer
-vim.keymap.set("n", "<leader>b", "<cmd>enew<CR>", opts)     -- new buffer
+vim.keymap.set("n", "<leader>b", "<cmd>enew<CR>", opts) -- new buffer
 
 -- splits: create ---------------------------------------------------------------------------------
-vim.keymap.set("n", "<leader>v", "<C-w>v", opts)  -- split vertically
-vim.keymap.set("n", "<leader>h", "<C-w>s", opts)  -- split horizontally
+vim.keymap.set("n", "<leader>v", "<C-w>v", opts) -- split vertically
+vim.keymap.set("n", "<leader>h", "<C-w>s", opts) -- split horizontally
 vim.keymap.set("n", "<leader>se", "<C-w>=", opts) -- equalize splits
 vim.keymap.set("n", "<leader>xs", "<cmd>close<CR>", opts) -- close current split
 
@@ -67,17 +67,24 @@ vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 --==================================================================================================
 -- DIAGNOSTICS   (global -- works for both LSP and linters; defined once, here)
 --==================================================================================================
-vim.keymap.set("n", "[d", function() vim.diagnostic.jump({ count = -1, float = true }) end,
-  { desc = "Previous diagnostic" })
-vim.keymap.set("n", "]d", function() vim.diagnostic.jump({ count = 1, float = true }) end,
-  { desc = "Next diagnostic" })
-vim.keymap.set("n", "<leader>pd", function() vim.diagnostic.jump({ count = -1 }) end,
-  { desc = "Previous diagnostic" })
-vim.keymap.set("n", "<leader>nd", function() vim.diagnostic.jump({ count = 1 }) end,
-  { desc = "Next diagnostic" })
-vim.keymap.set("n", "<leader>d", function() vim.diagnostic.open_float({ scope = "cursor" }) end,
-  { desc = "Diagnostic under cursor" })
-vim.keymap.set("n", "<leader>D", function() vim.diagnostic.open_float({ scope = "line" }) end,
-  { desc = "Line diagnostics" })
-vim.keymap.set("n", "<leader>q", function() vim.diagnostic.setloclist() end,
-  { desc = "Diagnostics list" })
+vim.keymap.set("n", "[d", function()
+	vim.diagnostic.jump({ count = -1, float = true })
+end, { desc = "Previous diagnostic" })
+vim.keymap.set("n", "]d", function()
+	vim.diagnostic.jump({ count = 1, float = true })
+end, { desc = "Next diagnostic" })
+vim.keymap.set("n", "<leader>pd", function()
+	vim.diagnostic.jump({ count = -1 })
+end, { desc = "Previous diagnostic" })
+vim.keymap.set("n", "<leader>nd", function()
+	vim.diagnostic.jump({ count = 1 })
+end, { desc = "Next diagnostic" })
+vim.keymap.set("n", "<leader>d", function()
+	vim.diagnostic.open_float({ scope = "cursor" })
+end, { desc = "Diagnostic under cursor" })
+vim.keymap.set("n", "<leader>D", function()
+	vim.diagnostic.open_float({ scope = "line" })
+end, { desc = "Line diagnostics" })
+vim.keymap.set("n", "<leader>q", function()
+	vim.diagnostic.setloclist()
+end, { desc = "Diagnostics list" })
