@@ -152,8 +152,8 @@ Available themes include several Jellybeans, OneDark, Kanagawa, Nord, and Rosé 
 ## TODO once you know your embedded toolchain
 
 `clangd` is generic right now. It reads `compile_commands.json` from your CMake
-build (`cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ...`). When you know the compiler
-at Pitch, add a query-driver line in `lua/zckerby/plugins/lsp.lua` under the clangd
+build (`cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ...`). Once you know your target
+compiler, add a query-driver line in `lua/zckerby/plugins/lsp.lua` under the clangd
 `cmd`, e.g. `"--query-driver=/usr/bin/arm-none-eabi-*"` (or the Windows path to your
 toolchain's `bin/*`).
 
