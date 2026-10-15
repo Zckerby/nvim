@@ -9,7 +9,7 @@ vim.pack.add({
 
 require("nvim-tree").setup({
   view = { width = 35 },
-  filters = { dotfiles = false },
+  filters = { dotfiles = false, git_ignored = false },
   renderer = { group_empty = true },
 })
 

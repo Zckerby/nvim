@@ -15,4 +15,6 @@ require("zckerby.plugins.telescope")
 require("zckerby.plugins.pairs") -- autopairs + autotag (before completion for <CR> fallback)
 require("zckerby.plugins.completion") -- MUST load before lsp (provides completion capabilities)
 require("zckerby.plugins.lsp")
+require("zckerby.plugins.dap")
+require("zckerby.plugins.java") -- after lsp + dap
 require("zckerby.plugins.format")
