@@ -139,11 +139,11 @@ vim.lsp.config("emmet_language_server", {
 	},
 })
 
--- Generic clangd -- NO toolchain assumed yet.
--- It will pick up flags from compile_commands.json (generate it from CMake with
---   cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ...   then symlink/copy it to your project root).
--- When you know your compiler at Pitch (e.g. an ARM cross-compiler), add a query-driver line, e.g.:
---   "--query-driver=/usr/bin/arm-none-eabi-*"   (or the Windows path to your toolchain's bin/*)
+-- Generic clangd. Picks up flags from each project's compile_commands.json
+-- (PlatformIO: `pio run -t compiledb`; CMake: -DCMAKE_EXPORT_COMPILE_COMMANDS=ON).
+-- --query-driver lets clangd ask these cross-compilers for their real system
+-- include paths, instead of guessing with the host compiler and flooding you
+-- with false "file not found" / builtin-type errors on embedded projects.
 vim.lsp.config("clangd", {
 	cmd = {
 		"clangd",
@@ -151,6 +151,7 @@ vim.lsp.config("clangd", {
 		"--clang-tidy",
 		"--header-insertion=never",
 		"--completion-style=detailed",
+		"--query-driver=/home/zckerby/.platformio/packages/toolchain-gccarmnoneeabi-teensy/bin/*,/usr/bin/arm-none-eabi-*,/home/zckerby/.platformio/packages/toolchain-xtensa*/bin/*",
 	},
 	filetypes = { "c", "cpp", "objc", "objcpp" },
 	root_markers = { "compile_commands.json", ".clangd", "CMakeLists.txt", ".git" },
@@ -160,7 +161,6 @@ vim.lsp.config("clangd", {
 vim.lsp.config("html", {})
 vim.lsp.config("ts_ls", {})
 vim.lsp.config("astro", {})
-vim.lsp.config("jdtls", {}) -- basic Java/Spring; add nvim-jdtls later if you want debugging
 vim.lsp.config("pyright", {})
 vim.lsp.config("bashls", {})
 
@@ -198,7 +198,12 @@ require("mason-tool-installer").setup({
 		"clang-format",
 		"shfmt",
 		"shellcheck",
+		"java-debug-adapter", -- jdtls bundles, loaded by java.lua
+		"java-test",
 	},
 })
 
-vim.lsp.enable(servers)
+-- jdtls is installed above but started by nvim-jdtls (java.lua), not here
+vim.lsp.enable(vim.tbl_filter(function(s)
+	return s ~= "jdtls"
+end, servers))

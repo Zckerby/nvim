@@ -11,7 +11,9 @@ vim.pack.add({
 	"https://github.com/shaunsingh/nord.nvim",
 	"https://github.com/rose-pine/neovim",
 	"https://github.com/devbydaniel/houston.nvim",
+	"https://github.com/LunarVim/templeos.nvim",
 	"https://github.com/Shadorain/shadotheme",
+	"https://github.com/scottmckendry/cyberdream.nvim",
 })
 
 require("themery").setup({
@@ -32,6 +34,13 @@ require("themery").setup({
 		{ name = "rose pine sunset", colorscheme = "rose-pine-moon" },
 		{ name = "houston", colorscheme = "houston" },
 		{ name = "purplePink", colorscheme = "shado" },
+		{ name = "temple", colorscheme = "templeos" },
+		{ name = "Cyberdream", colorscheme = "cyberdream", before = [[require("cyberdream").setup({ transparent = false })]] },
+		{ name = "Cyberdream Light", colorscheme = "cyberdream-light", before = [[require("cyberdream").setup({ transparent = false })]] },
+		{ name = "Cyberdream Muted", colorscheme = "cyberdream-muted", before = [[require("cyberdream").setup({ transparent = false })]] },
+		{ name = "Cyberdream Transparent", colorscheme = "cyberdream", before = [[require("cyberdream").setup({ transparent = true })]] },
+		{ name = "Cyberdream Light Transparent", colorscheme = "cyberdream-light", before = [[require("cyberdream").setup({ transparent = true })]] },
+		{ name = "Cyberdream Muted Transparent", colorscheme = "cyberdream-muted", before = [[require("cyberdream").setup({ transparent = true })]] },
 	},
 	livePreview = true,
 })
